@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --color-background: #F7F5F0;
+  --color-foreground: #1A1916;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #1A1916;
+  --color-primary: #1A1916;
+  --color-primary-foreground: #F7F5F0;
+  --color-muted: #EAE7DF;
+  --color-muted-foreground: #7A7568;
+  --color-accent: #2D6A4F;
+  --color-accent-foreground: #FFFFFF;
+  --color-danger: #C1440E;
+  --color-border: #DDD9CF;
+  --radius: 4px;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+html.dark {
+  --color-background: #141413;
+  --color-foreground: #F7F5F0;
+  --color-card: #1F1E1B;
+  --color-card-foreground: #F7F5F0;
+  --color-primary: #F7F5F0;
+  --color-primary-foreground: #141413;
+  --color-muted: #2A2925;
+  --color-muted-foreground: #A39E93;
+  --color-border: #33302B;
+}
+
+@theme inline {
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --color-card: var(--color-card);
+  --color-card-foreground: var(--color-card-foreground);
+  --color-primary: var(--color-primary);
+  --color-primary-foreground: var(--color-primary-foreground);
+  --color-muted: var(--color-muted);
+  --color-muted-foreground: var(--color-muted-foreground);
+  --color-accent: var(--color-accent);
+  --color-accent-foreground: var(--color-accent-foreground);
+  --color-danger: var(--color-danger);
+  --color-border: var(--color-border);
+  --radius: 4px;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+* {
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
